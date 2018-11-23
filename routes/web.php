@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('layout');
 });
 
-Route::get('Accueil','AccueilController@show');
-Route::get('Nouveautes','NouveautesController@show');
-Route::get('BDtheque','BDthequeController@show');
-Route::get('Admin','AdminController@show');
+Route::get('/Accueil','AccueilController@show');
+Route::get('/Nouveautes','NouveautesController@show');
+Route::get('/BDtheque','AccueilController@show');
+Route::get('/Admin','AdminController@show');
+Route::get('/Fiche','AccueilController@fiche');
+// Route::get('Fiche/{id}', function ($id) {
+//     return 'Product '.$id;
+// });

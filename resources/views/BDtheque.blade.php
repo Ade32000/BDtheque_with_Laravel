@@ -4,14 +4,35 @@
 
     BDthèque
 
-    @endsection('title')
+@endsection
 
 @section('content')
 
-    @foreach($comic as $comics)
+    <table>
+        <thead>
+            <tr>
+                @foreach($image as $image)
 
-    <p>{{ $comic->comic_title }}</p>
+                    <th>
+                        <form action="Fiche" method="get">
+                            <button class="img_bd" type="submit" name="imgId" value="{{$image->image_id}}">
+                                <img src="{{$image->image_src}}">
+                            </button>
+                        </form>
+                    </th>
 
-    @endforeach
+                @endforeach
+            </tr>
+        </thead>
 
-    @endsection('content')
+        <tbody>
+            <tr>
+                @foreach($comic as $comic)
+
+                    <td>{{ $comic->comic_title }}</td>
+
+                @endforeach
+            </tr>
+        </tbody>
+    </table>
+@endsection
