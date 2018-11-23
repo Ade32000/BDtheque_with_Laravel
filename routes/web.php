@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout');
 });
+
+Route::get('Accueil','AccueilController@show');
+Route::get('Nouveautes','NouveautesController@show');
+Route::get('BDtheque','BDthequeController@show');
+Route::get('Admin','AdminController@show');

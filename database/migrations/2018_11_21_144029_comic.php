@@ -16,8 +16,8 @@ class Comic extends Migration
         Schema::create('comic', function (Blueprint $table) {
             $table->increments('comic_id');
             $table->char('comic_title');
-            $table->integer('comic_total_collection');
-            $table->integer('comic_num_collection');
+            $table->integer('comic_total_collection')->nullable();
+            $table->integer('comic_num_collection')->nullable();
             $table->integer('comic_favorite');
             $table->timestamps();
             $table->unsignedInteger('fk_category');
