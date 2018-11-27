@@ -1,0 +1,38 @@
+#fiche_content{
+	display: flex;
+	flex-direction: row;
+	margin-top: 30px;
+	padding: 40px;
+	background-color: rgb(247, 249, 252);
+}
+#fiche_left{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	max-width: 70%;
+}
+#fiche_right{
+	background-color: rgb(159, 159, 160);
+	width: 25%;
+}
+#resume{
+	max-width: 50%;
+	margin-bottom: 20px;
+}
+h6, h5{
+	font-weight: bold;
+}
+h2{
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+#img_fiche{
+	width: 30%;
+	margin-bottom: 20px;
+	border: 10px solid rgba(202, 205, 209, 0.8);
+}
+body{
+	background-image: url("{{ asset('svg/back_fiche.jpg')}}");
+	background-color: grey;
+}
